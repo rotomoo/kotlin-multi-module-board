@@ -1,12 +1,8 @@
-# Kotlin Multi-Module Board
-
 ## 코틀린 멀티 모듈 게시판
 
 실무에서 사용하는 코틀린을 경험해 보기 위해 진행
 
 [코틀린 - 자바 멀티모듈 차이점](https://rotomoo.tistory.com/111)
-
----
 
 ## 프로젝트 구조
 
@@ -21,8 +17,6 @@ kotlin-multi-module-board/
 └── settings.gradle.kts       # 모듈 정의
 ```
 
----
-
 ## 기술 스택
 
 | 구분 | 기술 |
@@ -33,8 +27,6 @@ kotlin-multi-module-board/
 | Database | H2 (local), MySQL (dev/prod) |
 | Frontend | React 19, Vite 6, TypeScript |
 | Build | Gradle (Kotlin DSL) |
-
----
 
 ## 실행 방법
 
@@ -69,8 +61,6 @@ make install   # 의존성 설치 (Gradle build + npm install)
 make clean     # 빌드 정리
 ```
 
----
-
 ## 환경 설정
 
 ### Local (H2)
@@ -100,8 +90,6 @@ DB_PASSWORD=password
 # dev 프로필로 실행
 ./gradlew :api:bootRun --args='--spring.profiles.active=dev'
 ```
-
----
 
 ## API 명세
 
@@ -160,8 +148,6 @@ data class Pagination(
 }
 ```
 
----
-
 ### 카테고리 API
 
 | Method | Endpoint | 설명 |
@@ -180,8 +166,6 @@ data class Pagination(
 - 2단계 고정 (상위-하위)
 - 하위 카테고리는 자식을 가질 수 없음
 - 게시글은 하위 카테고리에만 작성 가능
-
----
 
 ### 게시글 API
 
@@ -202,8 +186,6 @@ data class Pagination(
 | size | int | 20 | 페이지 크기 |
 | keyword | string | - | 검색어 |
 | searchType | string | all | all, title, content, author |
-
----
 
 ## ERD
 
@@ -235,4 +217,5 @@ erDiagram
     CATEGORY ||--o{ CATEGORY : "parent-child"
     CATEGORY ||--o{ POST : "has many"
 ```
+
 
