@@ -4,6 +4,9 @@
 
 [코틀린 - 자바 멀티모듈 차이점](https://rotomoo.tistory.com/111)
 
+<img width="1328" height="685" alt="image" src="https://github.com/user-attachments/assets/b1c26ae6-0a7d-4299-8832-6dc4c707fb80" />
+
+
 ## 프로젝트 구조
 
 ```
@@ -217,5 +220,6 @@ erDiagram
     CATEGORY ||--o{ CATEGORY : "parent-child"
     CATEGORY ||--o{ POST : "has many"
 ```
+
 
 
