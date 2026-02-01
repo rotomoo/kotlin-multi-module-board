@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: kotlin-multi-module-board-api
+
+server:
+  port: ${API_PORT:8080}
